@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Integrations\Laravel;
+namespace Denbrian\Shopify\Integrations\Laravel;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Facade;
 class ShopifyFacade extends Facade
 {
     /**
-     * Return \Dan\Shopify\Manager singleton.
+     * Return \Denbrian\Shopify\Manager singleton.
      *
      * @return string
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Integrations\Laravel\Events;
+namespace Denbrian\Shopify\Integrations\Laravel\Events;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

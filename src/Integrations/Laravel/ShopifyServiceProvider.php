@@ -1,9 +1,9 @@
 <?php
 
-namespace Dan\Shopify\Integrations\Laravel;
+namespace Denbrian\Shopify\Integrations\Laravel;
 
-use Dan\Shopify\Shopify;
-use Dan\Shopify\Util;
+use Denbrian\Shopify\Shopify;
+use Denbrian\Shopify\Util;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -72,7 +72,7 @@ class ShopifyServiceProvider extends ServiceProvider
     {
         return [
             //'domain' => config('shopify.webhooks.route_domain', config('app.url')),
-            'namespace'  => 'Dan\Shopify\Integrations\Laravel\Http',
+            'namespace'  => 'Denbrian\Shopify\Integrations\Laravel\Http',
             'prefix'     => config('shopify.webhooks.route_prefix'),
             'middleware' => array_filter(['web', config('shopify.webhooks.middleware')]),
         ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify;
+namespace Denbrian\Shopify;
 
 use JsonSerializable;
 use Psr\Http\Message\MessageInterface;

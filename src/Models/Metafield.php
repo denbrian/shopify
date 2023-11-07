@@ -1,10 +1,10 @@
 <?php
 
-namespace Dan\Shopify\Models;
+namespace Denbrian\Shopify\Models;
 
 /**
  * Class Metafields
- * @package Dan\Shopify\Models
+ * @package Denbrian\Shopify\Models
  *
  * @property int $id
  * @property string $description

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dan\Shopify\Integrations\Laravel\Http;
+namespace Denbrian\Shopify\Integrations\Laravel\Http;
 
 use Closure;
-use Dan\Shopify\Util;
+use Denbrian\Shopify\Util;
 use Log;
 use Response;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify;
+namespace Denbrian\Shopify;
 
 /**
  * Interface HasShopifyClientInterface.

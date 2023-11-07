@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Integrations\Laravel\Http;
+namespace Denbrian\Shopify\Integrations\Laravel\Http;
 
 use BadMethodCallException;
 use Illuminate\Http\JsonResponse;

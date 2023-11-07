@@ -33,7 +33,7 @@ This won't always work as not every endpoint supports metafields, and any endpoi
 Below are examples of all the endpoints that support metafields.
 ```php
 // Get our API
-$api = Dan\Shopify\Shopify::make($shop, $token);
+$api = Denbrian\Shopify\Shopify::make($shop, $token);
 
 // Store metafields
 $api->metafields->get();
@@ -61,7 +61,7 @@ With the deprecation of the per page pagination comes a new cursor based paginat
 You can use the `next` method to get paged responses.  
 Example usage:
 ``` php
-$api = Dan\Shopify\Shopify::make($shop, $token);
+$api = Denbrian\Shopify\Shopify::make($shop, $token);
 // Get Shop data
 $api->shop() // Returns associative array of shop data
 // First call to next can have all the usual query params you might want.
@@ -74,12 +74,12 @@ $api->orders->next(['limit' => 100]);
 
 ``` php
 // Assumes setup of client with access token.
-$api = Dan\Shopify\Shopify::make($shop, $token);
+$api = Denbrian\Shopify\Shopify::make($shop, $token);
 
 // Get Shop data
 $api->shop() // Returns associative array of shop data
 
-$api->orders->find($order_id = 123);              // returns Dan\Shopify/Models/Order
+$api->orders->find($order_id = 123);              // returns Denbrian\Shopify/Models/Order
 
 // Alternatively, we may call methods on the API object.
 $api->orders->get([], $order_id = 123);           // returns array
@@ -95,11 +95,11 @@ In your `config/app.php`
 
 ### Add the following to your `providers` array:
 
-    Dan\Shopify\Integrations\Laravel\ShopifyServiceProvider::class,
+    Denbrian\Shopify\Integrations\Laravel\ShopifyServiceProvider::class,
     
 ### Add the following to your `aliases` array:
 
-    'Shopify' => Dan\Shopify\Integrations\Laravel\ShopifyFacade::class,
+    'Shopify' => Denbrian\Shopify\Integrations\Laravel\ShopifyFacade::class,
     
 ### Replace following variables in your `.env`
     
@@ -116,7 +116,7 @@ Empty or `admin` defaults to oldest legacy, [learn more](https://help.shopify.co
 SHOPIFY_API_BASE="admin/api/2019-10"
 ```
 
-### Using the Facade gives you `Dan\Shopify\Shopify`
+### Using the Facade gives you `Denbrian\Shopify\Shopify`
 
 > It will be instantiated with your shop and token you setup in `config/shopify.php`
 
@@ -168,7 +168,7 @@ Shopify::getAppInstallResponse(
 #### Verify App Hmac (works for callback or redirect)
 
 ``` php
-Dan\Shopify\Util::validAppHmac(
+Denbrian\Shopify\Util::validAppHmac(
     'hmac_from_request', 
     'your_app_client_secret', 
     ['shop' => '...', 'timestamp' => '...', ...]
@@ -178,7 +178,7 @@ Dan\Shopify\Util::validAppHmac(
 #### Verify App Webhook Hmac
 
 ``` php
-Dan\Shopify\Util::validWebhookHmac(
+Denbrian\Shopify\Util::validWebhookHmac(
     'hmac_from_request', 
     'your_app_client_secret', 
     file_get_contents('php://input')

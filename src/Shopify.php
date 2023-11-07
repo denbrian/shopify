@@ -1,28 +1,28 @@
 <?php
 
-namespace Dan\Shopify;
+namespace Denbrian\Shopify;
 
 use BadMethodCallException;
-use Dan\Shopify\Exceptions\InvalidOrMissingEndpointException;
-use Dan\Shopify\Exceptions\ModelNotFoundException;
-use Dan\Shopify\Helpers\Endpoint;
-use Dan\Shopify\Models\AbstractModel;
-use Dan\Shopify\Models\Asset;
-use Dan\Shopify\Models\Customer;
-use Dan\Shopify\Models\DiscountCode;
-use Dan\Shopify\Models\Dispute;
-use Dan\Shopify\Models\Fulfillment;
-use Dan\Shopify\Models\FulfillmentService;
-use Dan\Shopify\Models\Image;
-use Dan\Shopify\Models\Metafield;
-use Dan\Shopify\Models\Order;
-use Dan\Shopify\Models\PriceRule;
-use Dan\Shopify\Models\Product;
-use Dan\Shopify\Models\Risk;
-use Dan\Shopify\Models\SmartCollections;
-use Dan\Shopify\Models\Theme;
-use Dan\Shopify\Models\Variant;
-use Dan\Shopify\Models\Webhook;
+use Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException;
+use Denbrian\Shopify\Exceptions\ModelNotFoundException;
+use Denbrian\Shopify\Helpers\Endpoint;
+use Denbrian\Shopify\Models\AbstractModel;
+use Denbrian\Shopify\Models\Asset;
+use Denbrian\Shopify\Models\Customer;
+use Denbrian\Shopify\Models\DiscountCode;
+use Denbrian\Shopify\Models\Dispute;
+use Denbrian\Shopify\Models\Fulfillment;
+use Denbrian\Shopify\Models\FulfillmentService;
+use Denbrian\Shopify\Models\Image;
+use Denbrian\Shopify\Models\Metafield;
+use Denbrian\Shopify\Models\Order;
+use Denbrian\Shopify\Models\PriceRule;
+use Denbrian\Shopify\Models\Product;
+use Denbrian\Shopify\Models\Risk;
+use Denbrian\Shopify\Models\SmartCollections;
+use Denbrian\Shopify\Models\Theme;
+use Denbrian\Shopify\Models\Variant;
+use Denbrian\Shopify\Models\Webhook;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
@@ -34,36 +34,36 @@ use ReflectionException;
 /**
  * Class Shopify.
  *
- * @property \Dan\Shopify\Helpers\Assets $assets
- * @property \Dan\Shopify\Helpers\Customers $customers
- * @property \Dan\Shopify\Helpers\DiscountCodes $discount_codes
- * @property \Dan\Shopify\Helpers\Fulfillments $fulfillments
- * @property \Dan\Shopify\Helpers\FulfillmentServices $fulfillment_services
- * @property \Dan\Shopify\Helpers\Images $images
- * @property \Dan\Shopify\Helpers\Metafields $metafields
- * @property \Dan\Shopify\Helpers\Orders $orders
- * @property \Dan\Shopify\Helpers\PriceRule $price_rules
- * @property \Dan\Shopify\Helpers\Products $products
- * @property \Dan\Shopify\Helpers\SmartCollections $smart_collections
- * @property \Dan\Shopify\Helpers\Themes $themes
- * @property \Dan\Shopify\Helpers\Risks $risks
- * @property \Dan\Shopify\Helpers\Variants $variants
- * @property \Dan\Shopify\Helpers\Webhooks $webhooks
+ * @property \Denbrian\Shopify\Helpers\Assets $assets
+ * @property \Denbrian\Shopify\Helpers\Customers $customers
+ * @property \Denbrian\Shopify\Helpers\DiscountCodes $discount_codes
+ * @property \Denbrian\Shopify\Helpers\Fulfillments $fulfillments
+ * @property \Denbrian\Shopify\Helpers\FulfillmentServices $fulfillment_services
+ * @property \Denbrian\Shopify\Helpers\Images $images
+ * @property \Denbrian\Shopify\Helpers\Metafields $metafields
+ * @property \Denbrian\Shopify\Helpers\Orders $orders
+ * @property \Denbrian\Shopify\Helpers\PriceRule $price_rules
+ * @property \Denbrian\Shopify\Helpers\Products $products
+ * @property \Denbrian\Shopify\Helpers\SmartCollections $smart_collections
+ * @property \Denbrian\Shopify\Helpers\Themes $themes
+ * @property \Denbrian\Shopify\Helpers\Risks $risks
+ * @property \Denbrian\Shopify\Helpers\Variants $variants
+ * @property \Denbrian\Shopify\Helpers\Webhooks $webhooks
  *
- * @method \Dan\Shopify\Helpers\Customers customers(string $customer_id)
- * @method \Dan\Shopify\Helpers\DiscountCodes discount_codes(string $discount_code_id)
- * @method \Dan\Shopify\Helpers\Fulfillments fulfillments(string $fulfillment_id)
- * @method \Dan\Shopify\Helpers\FulfillmentServices fulfillment_services(string $fulfillment_service_id)
- * @method \Dan\Shopify\Helpers\Images images(string $image_id)
- * @method \Dan\Shopify\Helpers\Metafields metafields(string $metafield_id)
- * @method \Dan\Shopify\Helpers\Orders orders(string $order_id)
- * @method \Dan\Shopify\Helpers\PriceRules price_rules(string $price_rule_id)
- * @method \Dan\Shopify\Helpers\Products products(string $product_id)
- * @method \Dan\Shopify\Helpers\Risks risks(string $risk_id)
- * @method \Dan\Shopify\Helpers\SmartCollections smart_collections(string $smart_collection_id)
- * @method \Dan\Shopify\Helpers\Themes themes(string $theme_id)
- * @method \Dan\Shopify\Helpers\Variants variants(string $variant_id)
- * @method \Dan\Shopify\Helpers\Webhooks webhooks(string $webhook_id)
+ * @method \Denbrian\Shopify\Helpers\Customers customers(string $customer_id)
+ * @method \Denbrian\Shopify\Helpers\DiscountCodes discount_codes(string $discount_code_id)
+ * @method \Denbrian\Shopify\Helpers\Fulfillments fulfillments(string $fulfillment_id)
+ * @method \Denbrian\Shopify\Helpers\FulfillmentServices fulfillment_services(string $fulfillment_service_id)
+ * @method \Denbrian\Shopify\Helpers\Images images(string $image_id)
+ * @method \Denbrian\Shopify\Helpers\Metafields metafields(string $metafield_id)
+ * @method \Denbrian\Shopify\Helpers\Orders orders(string $order_id)
+ * @method \Denbrian\Shopify\Helpers\PriceRules price_rules(string $price_rule_id)
+ * @method \Denbrian\Shopify\Helpers\Products products(string $product_id)
+ * @method \Denbrian\Shopify\Helpers\Risks risks(string $risk_id)
+ * @method \Denbrian\Shopify\Helpers\SmartCollections smart_collections(string $smart_collection_id)
+ * @method \Denbrian\Shopify\Helpers\Themes themes(string $theme_id)
+ * @method \Denbrian\Shopify\Helpers\Variants variants(string $variant_id)
+ * @method \Denbrian\Shopify\Helpers\Webhooks webhooks(string $webhook_id)
  */
 class Shopify extends Client
 {
@@ -800,7 +800,7 @@ class Shopify extends Client
             $this->api = $endpoint;
         }
 
-        $className = "Dan\Shopify\\Helpers\\".Util::studly($endpoint);
+        $className = "Denbrian\Shopify\\Helpers\\".Util::studly($endpoint);
 
         if (class_exists($className)) {
             return new $className($this);

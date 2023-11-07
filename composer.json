@@ -1,5 +1,5 @@
 {
-    "name": "dan/shopify",
+    "name": "denbrian/shopify",
     "description": "Shopify API with Laravel integrations using latest Guzzle.",
     "license": "MIT",
     "keywords": [
@@ -13,7 +13,7 @@
     ],
     "autoload" : {
         "psr-4": {
-            "Dan\\Shopify\\": "src/"
+            "Denbrian\\Shopify\\": "src/"
         }
     },
     "require": {
@@ -26,7 +26,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dan\\Shopify\\Test\\": "tests/"
+            "Denbrian\\Shopify\\Test\\": "tests/"
         }
     },
     "scripts": {
@@ -35,10 +35,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dan\\Shopify\\Integrations\\Laravel\\ShopifyServiceProvider"
+                "Denbrian\\Shopify\\Integrations\\Laravel\\ShopifyServiceProvider"
             ],
             "aliases": {
-                "Shopify": "Dan\\Shopify\\Integrations\\Laravel\\ShopifyFacade"
+                "Shopify": "Denbrian\\Shopify\\Integrations\\Laravel\\ShopifyFacade"
             }
         }
     }

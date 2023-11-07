@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Models;
+namespace Denbrian\Shopify\Models;
 
 use Carbon\Carbon;
 

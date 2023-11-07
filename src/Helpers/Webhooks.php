@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Helpers;
+namespace Denbrian\Shopify\Helpers;
 
 /**
  * Class Webhooks.

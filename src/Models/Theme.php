@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Models;
+namespace Denbrian\Shopify\Models;
 
 /**
  * Class Theme.

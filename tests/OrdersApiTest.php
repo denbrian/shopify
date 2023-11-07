@@ -1,10 +1,10 @@
 <?php
 
-namespace Dan\Shopify\Test;
+namespace Denbrian\Shopify\Test;
 
-use Dan\Shopify\Helpers\Testing\ModelFactory\OrderFactory;
-use Dan\Shopify\Helpers\Testing\TransactionMock;
-use Dan\Shopify\Models\Order;
+use Denbrian\Shopify\Helpers\Testing\ModelFactory\OrderFactory;
+use Denbrian\Shopify\Helpers\Testing\TransactionMock;
+use Denbrian\Shopify\Models\Order;
 use PHPUnit\Framework\TestCase;
 
 class OrdersApiTest extends TestCase
@@ -15,12 +15,12 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
      * @throws \ReflectionException
      */
     public function it_gets_a_list_of_orders()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(OrderFactory::create(2)),
         ]);
 
@@ -39,12 +39,12 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
      * @throws \ReflectionException
      */
     public function it_gets_a_count_of_orders()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create('{ "count": 2 }'),
         ]);
 
@@ -62,13 +62,13 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
-     * @throws \Dan\Shopify\Exceptions\ModelNotFoundException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\ModelNotFoundException
      * @throws \ReflectionException
      */
     public function it_gets_a_order()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(OrderFactory::create()),
         ]);
 
@@ -86,12 +86,12 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
      * @throws \ReflectionException
      */
     public function it_creates_a_new_order()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(OrderFactory::create(), 201),
         ]);
 
@@ -116,7 +116,7 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
      * @throws \ReflectionException
      */
     public function it_updates_a_order()
@@ -125,7 +125,7 @@ class OrdersApiTest extends TestCase
             'note' => 'New note',
         ];
 
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(OrderFactory::create(1, $update)),
         ]);
 
@@ -148,7 +148,7 @@ class OrdersApiTest extends TestCase
      */
     public function it_deletes_a_order()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(),
         ]);
 
@@ -166,12 +166,12 @@ class OrdersApiTest extends TestCase
      *
      * @test
      *
-     * @throws \Dan\Shopify\Exceptions\InvalidOrMissingEndpointException
+     * @throws \Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException
      * @throws \ReflectionException
      */
     public function it_closes_an_order()
     {
-        $api = \Dan\Shopify\Shopify::fake([
+        $api = \Denbrian\Shopify\Shopify::fake([
             TransactionMock::create(OrderFactory::create(1, ['id' => 123]), 201),
         ]);
 

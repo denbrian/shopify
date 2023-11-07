@@ -1,8 +1,8 @@
 <?php
 
-namespace Dan\Shopify\Helpers;
+namespace Denbrian\Shopify\Helpers;
 
-use Dan\Shopify\Shopify;
+use Denbrian\Shopify\Shopify;
 
 class Metafields extends Endpoint
 {

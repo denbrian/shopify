@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Helpers\Testing;
+namespace Denbrian\Shopify\Helpers\Testing;
 
 use GuzzleHttp\Psr7\Response;
 

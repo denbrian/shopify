@@ -1,5 +1,5 @@
 <?php
 
-namespace Dan\Shopify\Helpers;
+namespace Denbrian\Shopify\Helpers;
 
 class PriceRules extends Endpoint { }

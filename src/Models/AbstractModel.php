@@ -1,10 +1,10 @@
 <?php
 
-namespace Dan\Shopify\Models;
+namespace Denbrian\Shopify\Models;
 
 use ArrayAccess;
 use Carbon\Carbon;
-use Dan\Shopify\Util;
+use Denbrian\Shopify\Util;
 use DateTime;
 use DateTimeInterface;
 use Exception;

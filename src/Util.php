@@ -1,8 +1,8 @@
 <?php
 
-namespace Dan\Shopify;
+namespace Denbrian\Shopify;
 
-use Dan\Shopify\Models\AbstractModel;
+use Denbrian\Shopify\Models\AbstractModel;
 use GuzzleHttp\Client;
 
 /**
@@ -186,7 +186,7 @@ class Util
     }
 
     /**
-     * @param int|string|array|\stdClass|\Dan\Shopify\Models\AbstractModel $mixed
+     * @param int|string|array|\stdClass|\Denbrian\Shopify\Models\AbstractModel $mixed
      *
      * @return int|null
      */

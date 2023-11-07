@@ -1,9 +1,9 @@
 <?php
 
-namespace Dan\Shopify\Helpers;
+namespace Denbrian\Shopify\Helpers;
 
-use Dan\Shopify\Exceptions\InvalidOrMissingEndpointException;
-use Dan\Shopify\Shopify;
+use Denbrian\Shopify\Exceptions\InvalidOrMissingEndpointException;
+use Denbrian\Shopify\Shopify;
 
 /**
  * Class Endpoint.

@@ -1,8 +1,8 @@
 <?php
 
-namespace Dan\Shopify\Helpers\Testing;
+namespace Denbrian\Shopify\Helpers\Testing;
 
-use Dan\Shopify\Shopify;
+use Denbrian\Shopify\Shopify;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;

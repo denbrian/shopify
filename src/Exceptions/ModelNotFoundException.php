@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Exceptions;
+namespace Denbrian\Shopify\Exceptions;
 
 use Exception;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dan\Shopify\Helpers;
+namespace Denbrian\Shopify\Helpers;
 
 use BadMethodCallException;
-use Dan\Shopify\Models\AbstractModel;
-use Dan\Shopify\Models\Asset;
+use Denbrian\Shopify\Models\AbstractModel;
+use Denbrian\Shopify\Models\Asset;
 
 /**
  * Class Assets.

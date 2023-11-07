@@ -1,6 +1,6 @@
 <?php
 
-namespace Dan\Shopify\Helpers\Testing\ModelFactory;
+namespace Denbrian\Shopify\Helpers\Testing\ModelFactory;
 
 class OrderFactory
 {
