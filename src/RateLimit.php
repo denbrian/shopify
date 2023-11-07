@@ -10,8 +10,8 @@ use Psr\Http\Message\MessageInterface;
  */
 class RateLimit implements JsonSerializable
 {
-    public const HEADER_CALL_LIMIT = 'X-Shopify-Shop-Api-Call-Limit';
-    public const HEADER_RETRY_AFTER = 'Retry-After';
+    const HEADER_CALL_LIMIT = 'X-Shopify-Shop-Api-Call-Limit';
+    const HEADER_RETRY_AFTER = 'Retry-After';
 
     /** @var int $calls */
     protected $calls = 0;
